@@ -5,13 +5,13 @@
 @tailwind utilities;
 
 :root {
-  --color-bg1: rgb(180, 117, 117);
-  --color-bg2: rgb(33, 85, 40);
-  --color1: 130, 18, 54;
-  --color2: 255, 255, 255;
-  --color3: 0, 0, 0;
-  --color4: 255, 255, 255;
-  --color5: 0, 0, 0;
+  --color-bg1: rgb(129, 183, 255);
+  --color-bg2: rgb(43, 57, 255);
+  --color1: 55, 52, 235;
+  --color2: 189, 52, 235;
+  --color3: 52, 211, 235;
+  --color4: 52, 235, 128;
+  --color5: 223, 235, 52;
   --color-interactive: 148, 0, 211;
   --circle-size: 80%;
   --blending: hard-light;
@@ -32,6 +32,30 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-10%);
   }
 }
 
@@ -69,6 +93,9 @@ svg {
   top: calc(50% - var(--circle-size) / 2);
   left: calc(50% - var(--circle-size) / 2);
 
+  transform-origin: center center;
+  animation: moveVertical 30s ease infinite;
+
   opacity: 1;
 }
 
@@ -86,6 +113,9 @@ svg {
   top: calc(50% - var(--circle-size) / 2);
   left: calc(50% - var(--circle-size) / 2);
 
+  transform-origin: calc(50% - 400px);
+  animation: moveInCircle 20s reverse infinite;
+
   opacity: 1;
 }
 .g3 {
@@ -101,6 +131,9 @@ svg {
   height: var(--circle-size);
   top: calc(50% - var(--circle-size) / 2 + 200px);
   left: calc(50% - var(--circle-size) / 2 - 500px);
+
+  transform-origin: calc(50% + 400px);
+  animation: moveInCircle 40s linear infinite;
 
   opacity: 1;
 }
@@ -118,6 +151,9 @@ svg {
   top: calc(50% - var(--circle-size) / 2);
   left: calc(50% - var(--circle-size) / 2);
 
+  transform-origin: calc(50% - 200px);
+  animation: moveHorizontal 40s ease infinite;
+
   opacity: 1;
 }
 .g5 {
@@ -133,6 +169,9 @@ svg {
   height: var(--circle-size);
   top: calc(50% - var(--circle-size));
   left: calc(50% - var(--circle-size));
+
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: moveInCircle 30s ease infinite;
 
   opacity: 1;
 }

@@ -1,0 +1,34 @@
+/* styles/globals.scss */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg1: rgb(108, 0, 162);
+  --color-bg2: rgb(27, 20, 20);
+  --color1: 18, 18, 18;
+  --color2: 255, 255, 255;
+  --color3: 0, 0, 0;
+  --color4: 255, 255, 255;
+  --color5: 0, 0, 0;
+  --color-interactive: 148, 0, 211;
+  --circle-size: 80%;
+  --blending: hard-light;
+}
+
+@layer base {
+  body {
+    @apply font-primary bg-primary text-white leading-loose;
+  }
+}
+
+.gradient-bg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+  top: 0;
+  left: 0;
+}

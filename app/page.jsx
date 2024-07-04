@@ -1,5 +1,15 @@
-import Image from "next/image";
+import React from "react";
+import "./globals.scss";
 
-export default function Home() {
-  return <main>homepage</main>;
-}
+// components
+import Header from "../components/Header";
+
+const Home = () => {
+  return (
+    <div className="gradient-bg">
+      <Header />
+    </div>
+  );
+};
+
+export default Home;

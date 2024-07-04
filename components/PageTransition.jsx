@@ -18,7 +18,6 @@ const PageTransition = ({ children }) => {
         />
         {children}
       </div>
-      {children}
     </AnimatePresence>
   );
 };

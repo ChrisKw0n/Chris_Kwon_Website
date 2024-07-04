@@ -67,6 +67,7 @@
   background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
   top: 0;
   left: 0;
+  z-index: -1;
 }
 
 svg {
@@ -92,6 +93,7 @@ svg {
   height: var(--circle-size);
   top: calc(50% - var(--circle-size) / 2);
   left: calc(50% - var(--circle-size) / 2);
+  z-index: -1;
 
   transform-origin: center center;
   animation: moveVertical 30s ease infinite;
@@ -112,6 +114,7 @@ svg {
   height: var(--circle-size);
   top: calc(50% - var(--circle-size) / 2);
   left: calc(50% - var(--circle-size) / 2);
+  z-index: -1;
 
   transform-origin: calc(50% - 400px);
   animation: moveInCircle 20s reverse infinite;
@@ -131,6 +134,7 @@ svg {
   height: var(--circle-size);
   top: calc(50% - var(--circle-size) / 2 + 200px);
   left: calc(50% - var(--circle-size) / 2 - 500px);
+  z-index: -1;
 
   transform-origin: calc(50% + 400px);
   animation: moveInCircle 40s linear infinite;
@@ -150,6 +154,7 @@ svg {
   height: var(--circle-size);
   top: calc(50% - var(--circle-size) / 2);
   left: calc(50% - var(--circle-size) / 2);
+  z-index: -1;
 
   transform-origin: calc(50% - 200px);
   animation: moveHorizontal 40s ease infinite;
@@ -169,6 +174,7 @@ svg {
   height: var(--circle-size);
   top: calc(50% - var(--circle-size));
   left: calc(50% - var(--circle-size));
+  z-index: -1;
 
   transform-origin: calc(50% - 800px) calc(50% + 200px);
   animation: moveInCircle 30s ease infinite;

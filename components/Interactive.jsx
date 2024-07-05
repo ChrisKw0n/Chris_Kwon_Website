@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import "../app/globals.scss";
 
-const InteractiveComponent = () => {
+const Interactive = () => {
   useEffect(() => {
     let curx = 0;
     let cury = 0;
@@ -45,4 +45,4 @@ const InteractiveComponent = () => {
   return <div className="interactive"></div>;
 };
 
-export default InteractiveComponent;
+export default Interactive;

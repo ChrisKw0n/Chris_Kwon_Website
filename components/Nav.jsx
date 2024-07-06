@@ -33,9 +33,7 @@ const Nav = () => {
           >
             {link.name}
           </Link>
-          {index < links.length - 1 && (
-            <span className="mx-2 text-gray-400">//</span>
-          )}
+          {index < links.length - 1 && <span className="mx-5">//</span>}
         </div>
       ))}
     </nav>

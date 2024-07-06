@@ -20,7 +20,21 @@
 @layer base {
   body {
     @apply font-primary leading-loose;
+    cursor: none;
   }
+}
+
+#circularcursor {
+  background-color: transparent;
+  border: 1.5px solid rgb(95, 95, 95);
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  position: fixed; /* Use fixed for accurate positioning */
+  z-index: 10000; /* Ensure it's above other elements */
+  pointer-events: none; /* Prevent it from blocking clicks */
+  transform: translate(-50%, -50%); /* Adjust for positioning */
+  mix-blend-mode: difference; /* Blend with the background to avoid covering */
 }
 
 @keyframes moveInCircle {

@@ -4,6 +4,7 @@ import "./globals.scss";
 // components
 import Header from "../components/Header";
 import PageTransition from "../components/PageTransition";
+import PageTransitionOut from "../components/PageTransitionOut"; // For fading out
 import Interactive from "../components/Interactive";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -55,7 +56,9 @@ export default function RootLayout({ children }) {
           </div>
         </div>
         <Header />
+        {/* <PageTransitionOut> */}
         <PageTransition>{children}</PageTransition>
+        {/* </PageTransitionOut> */}
       </body>
     </html>
   );

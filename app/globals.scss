@@ -24,6 +24,7 @@
   }
 }
 
+// Custome cursor
 #circularcursor {
   background-color: transparent;
   border: 1.5px solid rgb(95, 95, 95);
@@ -35,6 +36,14 @@
   pointer-events: none; /* Prevent it from blocking clicks */
   transform: translate(-50%, -50%); /* Adjust for positioning */
   mix-blend-mode: difference; /* Blend with the background to avoid covering */
+}
+
+/* Apply cursor:none to all clickable elements */
+a,
+button,
+input,
+[role="button"] {
+  cursor: none; /* Hide the native cursor */
 }
 
 @keyframes moveInCircle {

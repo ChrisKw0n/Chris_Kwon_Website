@@ -17,6 +17,7 @@ const Home = () => {
             target="_blank"
           >
             <Image
+              class="social-logo"
               src={instagramLogo}
               alt="Instagram Link"
               width={50}
@@ -28,6 +29,7 @@ const Home = () => {
         <div>
           <Link href="https://github.com/hyukjun3" target="_blank">
             <Image
+              class="social-logo"
               src={githubLogo}
               alt="Github Link"
               width={50}
@@ -42,6 +44,7 @@ const Home = () => {
             target="_blank"
           >
             <Image
+              class="social-logo"
               src={linkinLogo}
               alt="LinkedIn Link"
               width={50}

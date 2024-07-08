@@ -224,3 +224,11 @@ svg {
 
   gap: 1rem;
 }
+
+.social-logo {
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-logo:hover {
+  transform: scale(1.2);
+}

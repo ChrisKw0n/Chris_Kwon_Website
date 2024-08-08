@@ -241,3 +241,16 @@ svg {
 .social-logo:hover {
   transform: scale(1.2);
 }
+
+body {
+  transition-property: opacity, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+  background-color: black;
+}
+
+.page-transition {
+  opacity: 0;
+  background: black;
+  filter: blur(12px);
+}

@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { TransitionLink } from "./utils/TransitionLink";
 
 const links = [
   {
@@ -24,7 +24,7 @@ const Nav = () => {
     <nav className="flex items-center">
       {links.map((link, index) => (
         <div key={index} className="flex items-center">
-          <Link
+          <TransitionLink
             href={link.path}
             className={`${
               link.path === pathname &&
@@ -32,7 +32,7 @@ const Nav = () => {
             } capitalize font-medium hover:text-orange-400 transition-all`}
           >
             {link.name}
-          </Link>
+          </TransitionLink>
           {index < links.length - 1 && <span className="mx-5">//</span>}
         </div>
       ))}

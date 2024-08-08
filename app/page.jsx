@@ -10,7 +10,7 @@ import linkinLogo from "./images/linkedin_logo.png";
 const Home = () => {
   return (
     <div>
-      <div class="social-link-container container">
+      <div className="social-link-container container">
         <div>
           <Link
             href="https://www.instagram.com/chris.hkj/?hl=en"

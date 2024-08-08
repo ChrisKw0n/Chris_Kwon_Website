@@ -116,7 +116,7 @@ svg {
   width: 1000px;
   height: 1000px;
   top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2);
+  left: calc(70% - var(--circle-size) / 2);
   z-index: -1;
 
   transform-origin: center center;
@@ -137,11 +137,11 @@ svg {
   width: 1000px;
   height: 1000px;
   top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2);
+  left: calc(85% - var(--circle-size) / 2);
   z-index: -1;
 
   transform-origin: calc(50% - 400px);
-  animation: moveInCircle 20s reverse infinite;
+  animation: moveInCircle 30s reverse infinite;
 
   opacity: 1;
 }
@@ -157,7 +157,7 @@ svg {
   width: 1000px;
   height: 1000px;
   top: calc(50% - var(--circle-size) / 2 + 200px);
-  left: calc(50% - var(--circle-size) / 2 - 500px);
+  left: calc(90% - var(--circle-size) / 2 - 500px);
   z-index: -1;
 
   transform-origin: calc(50% + 400px);
@@ -177,7 +177,7 @@ svg {
   width: 1000px;
   height: 1000px;
   top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2);
+  left: calc(70% - var(--circle-size) / 2);
   z-index: -1;
 
   transform-origin: calc(50% - 200px);
@@ -197,11 +197,11 @@ svg {
   width: 1000px;
   height: 1000px;
   top: calc(50% - var(--circle-size));
-  left: calc(50% - var(--circle-size));
+  left: calc(70% - var(--circle-size));
   z-index: -1;
 
   transform-origin: calc(50% - 800px) calc(50% + 200px);
-  animation: moveInCircle 30s ease infinite;
+  animation: moveInCircle 40s ease infinite;
 
   opacity: 1;
 }

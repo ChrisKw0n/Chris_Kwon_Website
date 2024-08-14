@@ -225,9 +225,9 @@ svg {
 }
 
 .social-link-container {
-  position: fixed;
-  bottom: 70px;
-  right: -100px;
+  position: relative;
+  bottom: -500px;
+  right: 0px;
   flex-direction: column;
   align-items: center;
   display: flex;

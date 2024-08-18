@@ -5,14 +5,14 @@
 @tailwind utilities;
 
 :root {
-  --color-bg1: rgb(129, 183, 255);
-  --color-bg2: rgb(43, 57, 255);
-  --color1: 255, 255, 255;
-  --color2: 189, 52, 235;
-  --color3: 52, 211, 235;
-  --color4: 52, 235, 128;
-  --color5: 223, 235, 52;
-  --color-interactive: 255, 255, 255;
+  --color-bg1: rgb(115, 113, 252);
+  --color-bg2: rgb(115, 113, 252);
+  --color1: 165, 148, 249;
+  --color2: 205, 193, 255;
+  --color3: 165, 148, 249;
+  // --color4: 229, 217, 242;
+  // --color5: 202, 162, 228;
+  --color-interactive: 229, 217, 242;
   --circle-size: 80%;
   --blending: hard-light;
 }
@@ -165,7 +165,7 @@ svg {
   left: calc(90% - var(--circle-size) / 2 - 500px);
   z-index: -1;
 
-  transform-origin: calc(50% + 400px);
+  transform-origin: calc(50%);
   animation: moveInCircle 40s linear infinite;
 
   opacity: 1;

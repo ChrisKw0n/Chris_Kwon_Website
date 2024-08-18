@@ -11,7 +11,7 @@ const Header = () => {
         {/* Logo */}
         <Link href="/">
           <h1 className="text-4xl front-semibold">
-            Chris<span className="text-orange-400">.</span>
+            Chris<span style={{ color: "#F46C03" }}>.</span>
           </h1>
         </Link>
 

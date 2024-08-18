@@ -5,13 +5,13 @@
 @tailwind utilities;
 
 :root {
-  --color-bg1: rgb(115, 113, 252);
-  --color-bg2: rgb(115, 113, 252);
-  --color1: 165, 148, 249;
+  --color-bg1: rgb(96, 93, 255);
+  --color-bg2: rgb(128, 126, 255);
+  --color1: 202, 162, 228;
   --color2: 205, 193, 255;
   --color3: 165, 148, 249;
-  // --color4: 229, 217, 242;
-  // --color5: 202, 162, 228;
+  --color4: 229, 217, 242;
+  --color5: 202, 162, 228;
   --color-interactive: 229, 217, 242;
   --circle-size: 80%;
   --blending: hard-light;
@@ -77,13 +77,13 @@ TransactionButton:hover {
 
 @keyframes moveHorizontal {
   0% {
-    transform: translateX(-10%);
+    transform: translateX(-30%);
   }
   50% {
-    transform: translateX(10%);
+    transform: translateX(30%);
   }
   100% {
-    transform: translateX(-10%);
+    transform: translateX(-30%);
   }
 }
 
@@ -181,11 +181,11 @@ svg {
 
   width: 1000px;
   height: 1000px;
-  top: calc(50% - var(--circle-size) / 2);
+  top: calc(5% - var(--circle-size) / 2);
   left: calc(70% - var(--circle-size) / 2);
   z-index: -1;
 
-  transform-origin: calc(50% - 200px);
+  transform-origin: calc(50% - 400px);
   animation: moveHorizontal 40s ease infinite;
 
   opacity: 1;

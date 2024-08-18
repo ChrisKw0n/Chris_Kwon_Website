@@ -10,6 +10,12 @@ import linkinLogo from "./images/linkedin_logo.png";
 const Home = () => {
   return (
     <div>
+      <div className="welcome-text">
+        <h1>Not much to see here yet,</h1>
+        <h2>for now enjoy the interactive bubbles!</h2>
+        <h1 style={{ paddingTop: "80px" }}>Content coming soon</h1>
+      </div>
+
       <div className="social-link-container container">
         <div>
           <Link

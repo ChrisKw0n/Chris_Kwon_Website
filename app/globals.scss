@@ -32,7 +32,7 @@
   width: 25px;
   border-radius: 50%;
   position: fixed; /* Use fixed for accurate positioning */
-  z-index: 10000; /* Ensure it's above other elements */
+  z-index: 20000; /* Ensure it's above other elements */
   pointer-events: none; /* Prevent it from blocking clicks */
   transform: translate(-50%, -50%); /* Adjust for positioning */
   mix-blend-mode: difference; /* Blend with the background to avoid covering */
@@ -42,8 +42,13 @@
 a,
 button,
 input,
-[role="button"] {
+TransactionButton [role="button"] {
   cursor: none; /* Hide the native cursor */
+}
+
+button:hover,
+TransactionButton:hover {
+  cursor: none; /* Ensures the cursor is hidden when hovering over the button */
 }
 
 @keyframes moveInCircle {
@@ -226,7 +231,7 @@ svg {
 
 .social-link-container {
   position: relative;
-  bottom: -500px;
+  bottom: -100px;
   right: 0px;
   flex-direction: column;
   align-items: center;
@@ -256,4 +261,12 @@ body {
   opacity: 0;
   background: black;
   filter: blur(12px);
+}
+
+.welcome-text {
+  position: relative;
+  top: 150px;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
 }

@@ -8,6 +8,7 @@ import "./globals.scss";
 import Header from "../components/Header";
 import PageTransition from "../components/PageTransition";
 import Interactive from "../components/Interactive";
+import { ThirdwebProvider } from "./thirdweb";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -72,7 +73,9 @@ export default function RootLayout({ children }) {
           </div>
         </div>
         <Header />
-        <PageTransition>{children}</PageTransition>
+        <PageTransition>
+          <ThirdwebProvider>{children}</ThirdwebProvider>
+        </PageTransition>
       </body>
     </html>
   );

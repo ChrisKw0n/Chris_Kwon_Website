@@ -29,7 +29,7 @@ const Nav = () => {
           >
             {link.name}
           </TransitionLink>
-          {index < links.length - 1 && <span className="mx-5">//</span>}
+          {index < links.length - 1 && <span className="mx-5">{"//"}</span>}
         </div>
       ))}
     </nav>

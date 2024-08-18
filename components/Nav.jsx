@@ -22,10 +22,13 @@ const Nav = () => {
         <div key={index} className="flex items-center">
           <TransitionLink
             href={link.path}
-            className={`${
-              link.path === pathname &&
-              "text-orange-400 border-b-2 border-orange-400"
-            } capitalize font-medium hover:text-orange-400 transition-all`}
+            className={`capitalize font-medium transition-all 
+    ${
+      link.path === pathname
+        ? "text-[#F46C03] border-b-2 border-[#F46C03]"
+        : "hover:text-[#F46C03]"
+    }
+  `}
           >
             {link.name}
           </TransitionLink>

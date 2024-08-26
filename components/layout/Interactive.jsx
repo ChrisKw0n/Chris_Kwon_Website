@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import "../app/globals.scss";
+import "../../app/globals.scss";
 
 const Interactive = () => {
   useEffect(() => {

@@ -5,8 +5,8 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.scss";
 
 // components
-import Header from "../components/Header";
-import PageTransition from "../components/PageTransition";
+import Header from "../components/layout/Header";
+import PageTransition from "../components/transitions/PageTransition";
 import Interactive from "../components/layout/Interactive";
 import { ThirdwebProvider } from "./thirdweb";
 

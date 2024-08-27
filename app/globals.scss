@@ -5,7 +5,6 @@
 @tailwind utilities;
 
 :root {
-  --color-bg: rgb(128, 126, 255);
   --color1: 202, 162, 228;
   --color2: 205, 193, 255;
   --color3: 165, 148, 249;
@@ -17,7 +16,7 @@
 }
 
 body {
-  background-color: rgb(128, 126, 255); /* Replace with your desired color */
+  background-color: rgb(109, 106, 255); /* Replace with your desired color */
   color: white; /* Adjust text color if needed */
   min-height: 100%;
   margin: 0;

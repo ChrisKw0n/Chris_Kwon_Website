@@ -1,0 +1,24 @@
+.typingEffect {
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.socialLinkContainer {
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+  right: 10%;
+  top: 15%;
+}
+
+.socialLogo {
+  transition: transform 0.2s ease-in-out;
+}
+
+.socialLogo:hover {
+  transform: scale(1.2);
+}

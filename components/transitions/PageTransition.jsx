@@ -13,7 +13,7 @@ const PageTransition = ({ children }) => {
     // Fade-in effect
     setTimeout(() => {
       body?.classList.add("page-transition-complete");
-    }, 100); // Delay to ensure content is fully loaded before fading in
+    }, 800); // Delay to ensure content is fully loaded before fading in
 
     // Clean up classes
     return () => {

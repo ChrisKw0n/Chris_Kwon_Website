@@ -33,8 +33,8 @@ const Home = () => {
   return (
     <main className="overflow-hidden">
       <div>
-        <TypeEffectText />
         <SocialLinks />
+        <TypeEffectText />
       </div>
       <div className="h-[100vh]" />
       <Slide

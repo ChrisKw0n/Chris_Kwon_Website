@@ -54,9 +54,9 @@ export default function RootLayout({ children }) {
           </div>
         </div>
         <Header />
-        <PageTransition>
-          <ThirdwebProvider>{children}</ThirdwebProvider>
-        </PageTransition>
+        {/* <PageTransition> */}
+        <ThirdwebProvider>{children}</ThirdwebProvider>
+        {/* </PageTransition> */}
       </body>
     </html>
   );

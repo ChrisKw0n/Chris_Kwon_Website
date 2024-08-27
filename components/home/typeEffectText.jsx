@@ -4,7 +4,7 @@ import React from "react";
 import Typed from "typed.js";
 import Styles from "./home.module.scss";
 
-function typeEffectText() {
+function TypeEffectText() {
   // Create reference to store the DOM element containing the animation
   const el = React.useRef(null);
 
@@ -37,4 +37,4 @@ function typeEffectText() {
   );
 }
 
-export default typeEffectText;
+export default TypeEffectText;

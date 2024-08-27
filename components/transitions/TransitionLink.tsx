@@ -28,13 +28,14 @@ export const TransitionLink = ({
 
     body?.classList.add("page-transition");
 
-    await sleep(500);
+    await sleep(500); // Adjust the delay as needed
 
     router.push(href);
 
-    await sleep(500);
-
-    body?.classList.remove("page-transition");
+    // Optional: Delay removing the class until the new page is fully loaded
+    setTimeout(() => {
+      body?.classList.remove("page-transition");
+    }, 500); // Should match the duration of the fade-in in PageTransition
   };
 
   return (

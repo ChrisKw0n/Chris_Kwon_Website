@@ -1,24 +1,40 @@
 "use client";
-
-//Rename this file to out
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 const PageTransition = ({ children }) => {
   const pathname = usePathname();
+
+  useEffect(() => {
+    const body = document.querySelector("body");
+    body?.classList.add("page-transition-initial");
+
+    // Fade-in effect
+    setTimeout(() => {
+      body?.classList.add("page-transition-complete");
+    }, 100); // Delay to ensure content is fully loaded before fading in
+
+    // Clean up classes
+    return () => {
+      body?.classList.remove(
+        "page-transition-initial",
+        "page-transition-complete"
+      );
+    };
+  }, [pathname]);
 
   return (
     <AnimatePresence>
       <div key={pathname}>
         <motion.div
-          initial={{ opacity: 1 }}
-          animate={{
-            opacity: 0,
-            transition: { delay: 1, duration: 0.4, ease: "easeInOut" },
-          }}
-          className="h-screen w-screen fixed bg-primary top-0 pointer-events-none"
-        />
-        {children}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="transition-container"
+        >
+          {children}
+        </motion.div>
       </div>
     </AnimatePresence>
   );

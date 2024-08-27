@@ -23,9 +23,6 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  transition-property: opacity, filter;
-  transition-timing-function: ease-in-out;
-  transition-duration: 600ms;
 }
 
 main {
@@ -38,6 +35,23 @@ main {
   body {
     @apply font-primary leading-loose;
   }
+}
+
+/* Fade-out effect applied when navigating away */
+body.page-transition {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+/* Initial state of the page when loading a new route */
+.page-transition-initial {
+  opacity: 0;
+}
+
+/* Fade-in effect when the new page loads */
+.page-transition-complete {
+  transition: opacity 1s ease;
+  opacity: 1;
 }
 
 a,
@@ -180,12 +194,6 @@ svg {
   width: 800px;
   height: 800px;
   opacity: 0.7;
-}
-
-.page-transition {
-  opacity: 0;
-  background: black;
-  filter: blur(12px);
 }
 
 .welcome-text {

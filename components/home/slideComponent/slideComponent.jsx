@@ -30,7 +30,6 @@ const SlideComponent = () => {
 
   return (
     <div className="overflow-hidden">
-      <div></div>
       <div className="h-[100vh]" />
       <Slide
         src={Picture1}

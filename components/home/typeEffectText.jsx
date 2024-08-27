@@ -2,6 +2,7 @@
 
 import React from "react";
 import Typed from "typed.js";
+import styles from "./home.module.scss";
 
 function typeEffectText() {
   // Create reference to store the DOM element containing the animation
@@ -9,11 +10,16 @@ function typeEffectText() {
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
-      typeSpeed: 50,
-      loop: true,
-      backSpeed: 25,
+      strings: [
+        "Engineering student",
+        "Web3 developer",
+        "Music producer",
+        "Blockchain enthusiast",
+      ],
+      typeSpeed: 100,
+      backSpeed: 60,
       backDelay: 2000,
+      loop: true,
     });
 
     return () => {
@@ -23,8 +29,10 @@ function typeEffectText() {
   }, []);
 
   return (
-    <div className="App">
-      <span ref={el} />
+    <div className={styles.typingEffect}>
+      <h1>
+        <span ref={el} />
+      </h1>
     </div>
   );
 }

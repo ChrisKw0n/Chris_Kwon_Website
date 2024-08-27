@@ -5,8 +5,7 @@
 @tailwind utilities;
 
 :root {
-  --color-bg1: rgb(96, 93, 255);
-  --color-bg2: rgb(128, 126, 255);
+  --color-bg: rgb(128, 126, 255);
   --color1: 202, 162, 228;
   --color2: 205, 193, 255;
   --color3: 165, 148, 249;
@@ -17,38 +16,35 @@
   --blending: hard-light;
 }
 
+body {
+  background-color: rgb(128, 126, 255); /* Replace with your desired color */
+  color: white; /* Adjust text color if needed */
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  transition-property: opacity, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 600ms;
+}
+
+main {
+  min-height: 100vh;
+  position: relative; /* Ensure main is positioned correctly */
+  z-index: 1; /* Ensure it's above the circles */
+}
+
 @layer base {
   body {
     @apply font-primary leading-loose;
-    cursor: none;
   }
 }
 
-// Custome cursor
-#circularcursor {
-  background-color: transparent;
-  border: 1.5px solid rgb(95, 95, 95);
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  position: fixed; /* Use fixed for accurate positioning */
-  z-index: 20000; /* Ensure it's above other elements */
-  pointer-events: none; /* Prevent it from blocking clicks */
-  transform: translate(-50%, -50%); /* Adjust for positioning */
-  mix-blend-mode: difference; /* Blend with the background to avoid covering */
-}
-
-/* Apply cursor:none to all clickable elements */
 a,
 button,
 input,
-TransactionButton [role="button"] {
-  cursor: none; /* Hide the native cursor */
-}
-
-button:hover,
-TransactionButton:hover {
-  cursor: none; /* Ensures the cursor is hidden when hovering over the button */
+TransactionButton[role="button"] {
+  z-index: 10; /* Ensure it is above the circles */
 }
 
 @keyframes moveInCircle {
@@ -87,17 +83,6 @@ TransactionButton:hover {
   }
 }
 
-.gradient-bg {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  overflow: hidden;
-  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
 svg {
   display: none;
 }
@@ -106,126 +91,94 @@ svg {
   filter: url(#goo) blur(40px);
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Ensure it's behind the main content */
+}
+
+.g1,
+.g2,
+.g3,
+.g4,
+.g5,
+.interactive {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  z-index: 0; /* Ensure all circles are behind clickable elements */
 }
 
 .g1 {
-  position: absolute;
   background: radial-gradient(
       rgba(var(--color1), 0.8) 0,
       rgba(var(--color1), 0) 50%
     )
     no-repeat;
-
-  mix-blend-mode: var(--blending);
-
-  width: 1000px;
-  height: 1000px;
   top: calc(50% - var(--circle-size) / 2);
   left: calc(70% - var(--circle-size) / 2);
-  z-index: -1;
-
   transform-origin: center center;
   animation: moveVertical 30s ease infinite;
-
-  opacity: 1;
 }
 
 .g2 {
-  position: absolute;
   background: radial-gradient(
       rgba(var(--color2), 0.8) 0,
       rgba(var(--color2), 0) 50%
     )
     no-repeat;
-  mix-blend-mode: var(--blending);
-
-  width: 1000px;
-  height: 1000px;
   top: calc(50% - var(--circle-size) / 2);
   left: calc(115% - var(--circle-size) / 2);
-  z-index: -1;
-
   transform-origin: calc(50% - 400px);
   animation: moveInCircle 30s reverse infinite;
-
-  opacity: 1;
 }
+
 .g3 {
-  position: absolute;
   background: radial-gradient(
       rgba(var(--color3), 0.8) 0,
       rgba(var(--color3), 0) 50%
     )
     no-repeat;
-  mix-blend-mode: var(--blending);
-
-  width: 1000px;
-  height: 1000px;
   top: calc(50% - var(--circle-size) / 2 + 200px);
   left: calc(90% - var(--circle-size) / 2 - 500px);
-  z-index: -1;
-
   transform-origin: calc(50%);
   animation: moveInCircle 40s linear infinite;
-
-  opacity: 1;
 }
+
 .g4 {
-  position: absolute;
   background: radial-gradient(
       rgba(var(--color4), 0.8) 0,
       rgba(var(--color4), 0) 50%
     )
     no-repeat;
-  mix-blend-mode: var(--blending);
-
-  width: 1000px;
-  height: 1000px;
   top: calc(5% - var(--circle-size) / 2);
   left: calc(70% - var(--circle-size) / 2);
-  z-index: -1;
-
   transform-origin: calc(50% - 400px);
   animation: moveHorizontal 40s ease infinite;
-
-  opacity: 1;
 }
+
 .g5 {
-  position: absolute;
   background: radial-gradient(
       rgba(var(--color5), 0.8) 0,
       rgba(var(--color5), 0) 50%
     )
     no-repeat;
-  mix-blend-mode: var(--blending);
-
-  width: 1000px;
-  height: 1000px;
   top: calc(50% - var(--circle-size));
   left: calc(70% - var(--circle-size));
-  z-index: -1;
-
   transform-origin: calc(50% - 800px) calc(50% + 200px);
   animation: moveInCircle 40s ease infinite;
-
-  opacity: 1;
 }
 
 .interactive {
-  position: absolute;
   background: radial-gradient(
       rgba(var(--color-interactive), 0.8) 0,
       rgba(var(--color-interactive), 0) 50%
     )
     no-repeat;
-  mix-blend-mode: var(--blending);
-
-  width: 800px;
-  height: 800px;
   top: -400px;
   left: -400px;
-  z-index: -1;
-
+  width: 800px;
+  height: 800px;
   opacity: 0.7;
 }
 
@@ -238,8 +191,8 @@ svg {
   display: flex;
   float: right;
   padding-left: 800px;
-
   gap: 1rem;
+  z-index: 10; /* Ensure it is above the circles */
 }
 
 .social-logo {
@@ -248,13 +201,6 @@ svg {
 
 .social-logo:hover {
   transform: scale(1.2);
-}
-
-body {
-  transition-property: opacity, filter;
-  transition-timing-function: ease-in-out;
-  transition-duration: 600ms;
-  background-color: black;
 }
 
 .page-transition {
@@ -269,19 +215,4 @@ body {
   font-size: 2rem;
   color: white;
   text-align: center;
-}
-
-.typingContainer {
-  width: 100%;
-  height: 100%;
-  background: #2b323c;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.typingContainer h1 {
-  font-size: 80px;
-  font-weight: 600;
 }

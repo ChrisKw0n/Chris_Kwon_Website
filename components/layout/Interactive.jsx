@@ -17,6 +17,11 @@ const Interactive = () => {
       return;
     }
 
+    const handleMouseMove = (event) => {
+      tgX = event.clientX + window.scrollX; // Adjust for scroll position
+      tgY = event.clientY + window.scrollY; // Adjust for scroll position
+    };
+
     function move() {
       curx += (tgX - curx) / 20;
       cury += (tgY - cury) / 20;
@@ -26,19 +31,13 @@ const Interactive = () => {
       requestAnimationFrame(move);
     }
 
-    window.addEventListener("mousemove", (event) => {
-      tgX = event.clientX;
-      tgY = event.clientY;
-    });
+    window.addEventListener("mousemove", handleMouseMove);
 
     move();
 
     // Clean up the event listener on component unmount
     return () => {
-      window.removeEventListener("mousemove", (event) => {
-        tgX = event.clientX;
-        tgY = event.clientY;
-      });
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 

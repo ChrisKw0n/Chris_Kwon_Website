@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.scss";
 
@@ -17,28 +17,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export default function RootLayout({ children }) {
-  // Circular cursor
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const cursor = document.getElementById("circularcursor");
-      if (cursor) {
-        cursor.style.left = `${e.pageX}px`;
-        cursor.style.top = `${e.pageY}px`;
-      }
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
-
-    // Clean up event listener on component unmount
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
   return (
     <html lang="en">
       <body className={jetbrainsMono.variable}>
-        <div id="circularcursor"></div>
         <div className="gradient-bg">
           <svg xmlns="http://www.w3.org/2000/svg">
             <defs>

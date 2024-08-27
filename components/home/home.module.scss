@@ -4,3 +4,21 @@
   text-align: center; /* Center text horizontally */
   margin-top: 20px; /* Adjust margin for positioning */
 }
+
+.socialLinkContainer {
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+  right: 10%;
+}
+
+.socialLogo {
+  transition: transform 0.2s ease-in-out;
+}
+
+.socialLogo:hover {
+  transform: scale(1.2);
+}

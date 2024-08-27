@@ -2,7 +2,7 @@
 
 import React from "react";
 import Typed from "typed.js";
-import styles from "./home.module.scss";
+import Styles from "./home.module.scss";
 
 function typeEffectText() {
   // Create reference to store the DOM element containing the animation
@@ -29,7 +29,7 @@ function typeEffectText() {
   }, []);
 
   return (
-    <div className={styles.typingEffect}>
+    <div className={Styles.typingEffect}>
       <h1>
         <span ref={el} />
       </h1>

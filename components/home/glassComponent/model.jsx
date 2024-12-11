@@ -27,16 +27,7 @@ export default function Model() {
   });
 
   return (
-    <group scale={viewport.width / 3}>
-      ...
-      <mesh ref={torus} {...nodes.Torus002}>
-        <MeshTransmissionMaterial {...materialProps} />
-      </mesh>
-    </group>
-  );
-
-  return (
-    <group scale={viewport.width / 3.75}>
+    <group scale={viewport.width / 5}>
       <Text
         position={[0, 0, -1]}
         fontSize={0.5}
@@ -47,7 +38,7 @@ export default function Model() {
         hello world!
       </Text>
       <mesh ref={torus} {...nodes.Torus002}>
-        <meshBasicMaterial />
+        <MeshTransmissionMaterial {...materialProps} />
       </mesh>
     </group>
   );

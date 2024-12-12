@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useGLTF, Text, MeshTransmissionMaterial } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useControls } from "leva";
+import { color } from "framer-motion";
 
 export default function Model() {
   const { nodes } = useGLTF("/media/torrus.glb");
@@ -24,6 +25,8 @@ export default function Model() {
     chromaticAberration: { value: 0.02, min: 0, max: 1 },
 
     backside: { value: true },
+
+    color: "#C3B1E1",
   });
 
   return (
@@ -35,7 +38,7 @@ export default function Model() {
         anchorX="center"
         anchorY="middle"
       >
-        hello world!
+        Hey There!
       </Text>
       <mesh ref={torus} {...nodes.Torus002}>
         <MeshTransmissionMaterial {...materialProps} />

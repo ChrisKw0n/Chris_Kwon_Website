@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <main>
       <TypeEffectText />
-      <SocialLinks />
       <GlassComponent />
+      <SocialLinks />
       <SlideComponent />
     </main>
   );

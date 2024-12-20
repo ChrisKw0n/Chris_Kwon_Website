@@ -7,8 +7,9 @@ export default function Model() {
   let nodes = null;
   try {
     // Attempt to load the model
-    const gltf = useGLTF("/media/torrus.glb");
+    const gltf = useGLTF("/media/2.glb");
     nodes = gltf.nodes;
+    console.log("Nodes:", nodes);
     console.log("GLTF model loaded successfully:", gltf);
   } catch (error) {
     // Log detailed error if loading fails
@@ -18,10 +19,9 @@ export default function Model() {
   const { viewport } = useThree();
   const torus = useRef(null);
 
-  useFrame(() => {
-    if (torus.current) {
-      torus.current.rotation.x += 0.02;
-    }
+  const { spinSpeed, moveSpeed } = useControls({
+    spinSpeed: { value: 0.0025, min: 0, max: 0.05, step: 0.0005 }, // Slider for spin speed
+    moveSpeed: { value: 0.025, min: 0, max: 5, step: 0.01 }, // Slider for left-right movement speed
   });
 
   const materialProps = useControls({
@@ -32,6 +32,17 @@ export default function Model() {
     chromaticAberration: { value: 0.02, min: 0, max: 1 },
     backside: { value: true },
     color: "#C3B1E1",
+  });
+
+  useFrame(({ clock }) => {
+    if (torus.current) {
+      // Spin the model
+      torus.current.rotation.x += spinSpeed;
+
+      // Move left and right
+      torus.current.position.x =
+        Math.sin(clock.getElapsedTime() * moveSpeed) * 1; // Adjust multiplier for amplitude
+    }
   });
 
   // Only render the scene if the model is loaded
@@ -60,7 +71,7 @@ export default function Model() {
         anchorX="center"
         anchorY="middle"
       >
-        Hey There!
+        Perspective
       </Text>
       <mesh ref={torus} {...nodes.Torus002}>
         <MeshTransmissionMaterial {...materialProps} />

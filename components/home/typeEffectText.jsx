@@ -11,15 +11,14 @@ function TypeEffectText() {
   React.useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "Engineering student",
-        "Web3 developer",
-        "Music producer",
-        "Blockchain enthusiast",
+        "Hey there! I'm Chris",
+        "when solving problems,<br>sometimes all you need<br>is a little...",
       ],
       typeSpeed: 100,
       backSpeed: 60,
       backDelay: 2000,
       loop: true,
+      escapeHTML: false, // Allow HTML tags in strings
     });
 
     return () => {

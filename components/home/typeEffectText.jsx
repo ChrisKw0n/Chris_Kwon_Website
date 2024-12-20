@@ -12,7 +12,8 @@ function TypeEffectText() {
     const typed = new Typed(el.current, {
       strings: [
         "Hey there! I'm Chris",
-        "when solving problems,<br>sometimes all you need<br>is a little...",
+        "when solving problems",
+        "sometimes all you need<br>is a little...",
       ],
       typeSpeed: 100,
       backSpeed: 60,

@@ -1,8 +1,11 @@
 .typingEffect {
-  font-size: 50px;
+  font-size: 2vw;
   color: #ffffff;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 7.5%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .socialLinkContainer {

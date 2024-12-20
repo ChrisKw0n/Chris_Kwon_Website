@@ -7,7 +7,8 @@ export default function Model() {
   let nodes = null;
   try {
     // Attempt to load the model
-    const gltf = useGLTF("/media/2.glb");
+    // const gltf = useGLTF("/media/1.glb");
+    const gltf = useGLTF("/media/3.glb");
     nodes = gltf.nodes;
     console.log("Nodes:", nodes);
     console.log("GLTF model loaded successfully:", gltf);
@@ -21,7 +22,7 @@ export default function Model() {
 
   const { spinSpeed, moveSpeed } = useControls({
     spinSpeed: { value: 0.0025, min: 0, max: 0.05, step: 0.0005 }, // Slider for spin speed
-    moveSpeed: { value: 0.025, min: 0, max: 5, step: 0.01 }, // Slider for left-right movement speed
+    moveSpeed: { value: 0.04, min: 0, max: 5, step: 0.01 }, // Slider for left-right movement speed
   });
 
   const materialProps = useControls({
@@ -38,6 +39,8 @@ export default function Model() {
     if (torus.current) {
       // Spin the model
       torus.current.rotation.x += spinSpeed;
+
+      torus.current.rotation.y += spinSpeed;
 
       // Move left and right
       torus.current.position.x =
@@ -73,7 +76,7 @@ export default function Model() {
       >
         Perspective
       </Text>
-      <mesh ref={torus} {...nodes.Torus002}>
+      <mesh ref={torus} {...nodes.Object_2} scale={0.9}>
         <MeshTransmissionMaterial {...materialProps} />
       </mesh>
     </group>

@@ -21,8 +21,8 @@ export default function Model() {
   const torus = useRef(null);
 
   const { spinSpeed, moveSpeed } = useControls({
-    spinSpeed: { value: 0.0025, min: 0, max: 0.05, step: 0.0005 }, // Slider for spin speed
-    moveSpeed: { value: 0.04, min: 0, max: 5, step: 0.01 }, // Slider for left-right movement speed
+    spinSpeed: { value: 0.003, min: 0, max: 0.05, step: 0.0005 }, // Slider for spin speed
+    moveSpeed: { value: 0.1, min: 0, max: 5, step: 0.01 }, // Slider for left-right movement speed
   });
 
   const materialProps = useControls({

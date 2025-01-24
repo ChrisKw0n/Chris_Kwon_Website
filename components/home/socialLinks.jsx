@@ -24,7 +24,7 @@ function SocialLinks() {
         </Link>
       </MagneticLink>
       <MagneticLink>
-        <Link href="https://github.com/hyukjun3" target="_blank">
+        <Link href="https://github.com/ChrisKw0n" target="_blank">
           <Image
             className={Styles.socialLogo}
             src={githubLogo}

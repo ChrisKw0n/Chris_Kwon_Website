@@ -1,7 +1,7 @@
 import React from "react";
 import { ConnectButton, useActiveAccount } from "thirdweb/react";
 import { chain, client } from "../../utils/constants";
-import Counter from "./counter";
+import Faucet from "./faucet";
 
 const Login: React.FC = () => {
   const account = useActiveAccount();
@@ -25,7 +25,7 @@ const Login: React.FC = () => {
               connectModal={{ showThirdwebBranding: false, size: "compact" }}
               theme={"light"}
             />
-            <Counter />
+            <Faucet />
           </div>
         ) : (
           <div style={{ textAlign: "center" }}>

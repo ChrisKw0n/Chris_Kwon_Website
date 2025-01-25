@@ -2,7 +2,7 @@
 import React from "react";
 import Login from "../../components/demo/login";
 
-const Demo = () => {
+const Utility = () => {
   return (
     <div>
       <Login />
@@ -10,4 +10,4 @@ const Demo = () => {
   );
 };
 
-export default Demo;
+export default Utility;

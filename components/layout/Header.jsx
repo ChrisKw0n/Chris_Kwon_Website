@@ -10,8 +10,8 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <h1 className="text-4xl front-semibold">
-            Chris<span style={{ color: "#F46C03" }}>.</span>
+          <h1 className="text-5xl front-semibold">
+            Chris<span style={{ color: "#FFC785" }}>.</span>
           </h1>
         </Link>
 
@@ -19,7 +19,7 @@ const Header = () => {
         <div className="xl:flex items-center gap-8">
           <Nav />
           <Link href="">
-            <Button>Coming soon</Button>
+            <Button>Contact me</Button>
           </Link>
         </div>
       </div>

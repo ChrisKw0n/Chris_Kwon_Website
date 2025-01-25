@@ -8,10 +8,6 @@ const links = [
     name: "Home",
     path: "/",
   },
-  {
-    name: "Demo",
-    path: "/demo",
-  },
 ];
 
 const Nav = () => {
@@ -22,11 +18,11 @@ const Nav = () => {
         <div key={index} className="flex items-center">
           <TransitionLink
             href={link.path}
-            className={`capitalize font-medium transition-all 
+            className={`capitalize font-medium text-[25px] transition-all 
     ${
       link.path === pathname
-        ? "text-[#F46C03] border-b-2 border-[#F46C03]"
-        : "hover:text-[#F46C03]"
+        ? "text-[#ff6868] border-b-2 border-[#ff6868]"
+        : "hover:text-[#ff6868]"
     }
   `}
           >

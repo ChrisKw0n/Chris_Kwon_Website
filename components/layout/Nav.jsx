@@ -8,10 +8,6 @@ const links = [
     name: "Home",
     path: "/",
   },
-  {
-    name: "Demo",
-    path: "/demo",
-  },
 ];
 
 const Nav = () => {

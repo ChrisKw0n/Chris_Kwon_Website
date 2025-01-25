@@ -2,12 +2,11 @@ import React from "react";
 import { ConnectButton, useActiveAccount } from "thirdweb/react";
 import { chain, client } from "../../utils/constants";
 import Counter from "./counter";
-import Styles from "./demo.module.scss";
 
 const Login: React.FC = () => {
   const account = useActiveAccount();
   return (
-    <div className={Styles.loginComponents}>
+    <div>
       <div
         style={{
           position: "relative",

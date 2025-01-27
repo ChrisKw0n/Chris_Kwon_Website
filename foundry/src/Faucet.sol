@@ -4,7 +4,7 @@ pragma solidity ^0.8.13;
 contract Faucet {
     address public owner;
     uint256 public withdrawalLimit = 0.1 ether; // Max amount to withdraw per request
-    uint256 public cooldownTime = 1 hours; // Cooldown period between withdrawals
+    uint256 public cooldownTime = 1 days; // Cooldown period between withdrawals
 
     mapping(address => uint256) public lastWithdrawalTime;
 
